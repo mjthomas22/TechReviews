@@ -193,6 +193,11 @@
     <Content Include="Images\mice.png" />
     <Content Include="Images\Mice\Azio.jpg" />
     <Content Include="Images\Mice\razer.jpg" />
+    <Content Include="Images\Stars\fiveStar.png" />
+    <Content Include="Images\Stars\fourStar.png" />
+    <Content Include="Images\Stars\oneStar.png" />
+    <Content Include="Images\Stars\threeStar.png" />
+    <Content Include="Images\Stars\twoStar.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />

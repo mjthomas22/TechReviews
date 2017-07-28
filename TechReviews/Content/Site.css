@@ -87,3 +87,16 @@ footer{
 .title{
     text-align:left;
 }
+#money::before {
+    content: "$";
+}
+.stars{
+    height:25px;
+}
+.reviewCol{
+    height:380px;
+    width:380px;
+    margin-bottom:8px;
+    margin-top:8px;
+
+}

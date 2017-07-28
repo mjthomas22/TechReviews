@@ -9,36 +9,55 @@
 <h2 class="otherHeaders">Reviews</h2>
 <hr />
 
-<div class="row">
+<div class="row ">
 
     @foreach (var item in Model)
     {
-        <div class="col-md-4">
+        <div class="col-md-4 reviewCol">
 
             <div>
                 <img class="img-responsive img-thumbnail" src=@Html.DisplayFor(modelItem => item.ProductImg) />
                 <span id="catType"> @Html.DisplayFor(modelItem => item.Category.Type)</span>
             </div>
-            
+
             <div>
                 <h4 class="title"> @Html.DisplayFor(modelItem => item.Title)</h4>
             </div>
-            <hr />
 
-            @Html.DisplayFor(modelItem => item.Content)
-
-            @Html.DisplayFor(modelItem => item.PublishDate)
-
-            @Html.DisplayFor(modelItem => item.Rating)
-
-            @Html.DisplayFor(modelItem => item.Price)
-
-            @Html.DisplayFor(modelItem => item.Budget)
-            
-            @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
+            <div>
+                <h5 class="title">Budget: @Html.DisplayFor(modelItem => item.Budget)</h5>
+                <h5 class="title">Price: <span id="money">@Html.DisplayFor(modelItem => item.Price)</span></h5>
+            </div>
+            <div>
+                <h5 class="title">Review Date: @Html.DisplayFor(modelItem => item.PublishDate.Month)/@Html.DisplayFor(modelItem => item.PublishDate.Year)</h5>
+            </div>
+            <div>
+                @{ 
+                    if(item.Rating>=8)
+                    {
+                       <img class="stars" src ="/Images/Stars/fiveStar.png"/>
+                    }
+                    else if (item.Rating >= 6)
+                    {
+                        <img class="stars" src="/Images/Stars/fourStar.png" />
+                    }
+                    else if (item.Rating >= 4)
+                    {
+                        <img class="stars" src="/Images/Stars/threeStar.png" />
+                    }
+                    else if (item.Rating >= 2)
+                    {
+                        <img class="stars" src="/Images/Stars/twoStar.png" />
+                    }
+                    else 
+                    {
+                        <img class="stars" src="/Images/Stars/oneStar.png" />
+                    }
+                }
+            </div>
+            <a class="btn btn-default" href="@Url.Action("Details", new { id = item.ReviewID })">Read More &raquo;</a>
         </div>
+        <p></p>
     }
-    </div>
-    </table>
+</div>
+

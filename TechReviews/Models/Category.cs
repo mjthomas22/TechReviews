@@ -11,7 +11,6 @@ namespace TechReviews.Models
         [Key]
         public int CategoryID { get; set; }
         public string Type { get; set; }
-        public string Budget { get; set; }
         public string CategoryImg { get; set; }
 
         public virtual ICollection<Review> Reviews { get; set; }

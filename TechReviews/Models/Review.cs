@@ -17,6 +17,7 @@ namespace TechReviews.Models
         public string ProductImg { get; set; }
         public double Rating { get; set; }
         public double Price { get; set; }
+        public string Budget { get; set; }
 
         [ForeignKey("Category")]
         public int CategoryID { get; set; }

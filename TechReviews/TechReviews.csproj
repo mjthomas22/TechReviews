@@ -182,12 +182,15 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Images\GPU.png" />
+    <Content Include="Images\GPU\EVGAGTX1050.jpg" />
+    <Content Include="Images\GPU\EVGAGTX1080.jpg" />
     <Content Include="Images\keyboards.png" />
     <Content Include="Images\Keyboards\blackwidow.jpg" />
     <Content Include="Images\Keyboards\Corn.jpg" />
     <Content Include="Images\Keyboards\LogitechK120.jpg" />
     <Content Include="Images\mice.png" />
     <Content Include="Images\Mice\Azio.jpg" />
+    <Content Include="Images\Mice\razer.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />

@@ -2,30 +2,28 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="jumbotron header">
+    <h1>All Tech All the Time</h1>
+    <h3>Best Tech Reviews on the Web</h3>
+    <p class="lead"></p>    
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+    <div class="col-md-3 homeCol">
+        <h2>Buy Your Tech Here</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            Aenean aliquet massa nec pretium dignissim. Praesent eu turpis nec dolor efficitur finibus. 
+            Nunc sed luctus dui. Fusce egestas non nibh eu consectetur. Sed in rutrum dolor, et eleifend lectus.
+        <p>
+        <a class="btn btn-default" href="https://www.newegg.com/"target="_blank">Newegg &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="col-md-6 homeCol">
+        <a href="http://www.dice.com/" target="_blank"><img class="img-responsive" id="adPicture" src="~/Images/billboard-2.jpg" /></a>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-md-3 homeCol">
+        <h2>Review The Tech Yourself</h2>
+        <p>Aliquam eleifend bibendum libero, a molestie urna consectetur ut. Nullam quis neque viverra, vestibulum arcu et, 
+        aliquet sem. Sed vel rhoncus tellus, ac feugiat nulla. Sed at purus porta, sollicitudin.</p>
+        <p><a class="btn btn-default" href="@Url.Action("Create", "Reviews")">Add Reviews &raquo;</a></p>
     </div>
 </div>

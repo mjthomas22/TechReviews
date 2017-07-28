@@ -1,12 +1,21 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #052149;
+    background: -webkit-linear-gradient(#3eb5f7, #052149);
+    background: -moz-linear-gradient(#3eb5f7, #052149);
+    background: linear-gradient(#3eb5f7, #052149);
+    color: black;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background: #052149;
+    background: -webkit-linear-gradient(#3eb5f7, #052149);
+    background: -moz-linear-gradient(#3eb5f7, #052149);
+    background: linear-gradient(#3eb5f7, #052149);
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -25,4 +34,56 @@ textarea {
 .img-thumbnail{
     height:150px;
     border:0;
+}
+.header {
+    background-image: url('../Images/headerbg.jpg');
+    background-size:cover;
+    color:black;
+    text-align:center;
+    display:block;
+}
+.navbar.navbar-inverse.navbar-fixed-top {
+    background: #052149;
+    background: -webkit-linear-gradient(#3eb5f7, #052149);
+    background: -moz-linear-gradient(#3eb5f7, #052149);
+    background: linear-gradient(#3eb5f7, #052149);
+    color:black;
+}
+.navbar.navbar-inverse.navbar-fixed-top a{
+    color:black;
+    font-size:larger;
+}
+    .navbar.navbar-inverse.navbar-fixed-top a:hover {
+        color: #052149;
+        display: block;
+        background-color: #3eb5f7;
+        font-size: larger;
+    }
+.btn.btn-default {
+    background: #052149;
+    background: -webkit-linear-gradient(#3eb5f7, #052149);
+    background: -moz-linear-gradient(#3eb5f7, #052149);
+    background: linear-gradient(#3eb5f7, #052149);
+    color: black;
+    border:0;
+}
+footer{
+    text-align:center;
+}
+.homeCol{
+    text-align:center;
+}
+#adPicture{
+    margin-top:60px;
+}
+.otherHeaders {
+    color: black;
+    text-align: center;
+    display: block;
+}
+#catType{
+    margin:15px;
+}
+.title{
+    text-align:left;
 }

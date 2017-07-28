@@ -13,6 +13,7 @@ namespace TechReviews.Models
         public int ReviewID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
+        [Display(Name ="Published Date")]
         public DateTime PublishDate { get; set; }
         public string ProductImg { get; set; }
         public double Rating { get; set; }

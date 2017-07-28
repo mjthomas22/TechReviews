@@ -181,9 +181,11 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Images\billboard-2.jpg" />
     <Content Include="Images\GPU.png" />
     <Content Include="Images\GPU\EVGAGTX1050.jpg" />
     <Content Include="Images\GPU\EVGAGTX1080.jpg" />
+    <Content Include="Images\headerbg.jpg" />
     <Content Include="Images\keyboards.png" />
     <Content Include="Images\Keyboards\blackwidow.jpg" />
     <Content Include="Images\Keyboards\Corn.jpg" />

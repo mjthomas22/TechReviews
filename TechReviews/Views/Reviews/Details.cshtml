@@ -9,74 +9,76 @@
 <div>
     <h4>Review</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.Type)
-        </dt>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default  panel--styled">
+                    <div class="panel-body">
+                        <div class="col-md-12 panelTop">
+                            <div class="col-md-4">
+                                <img class="img-responsive" id="stars" src=@Html.DisplayFor(model => model.ProductImg) />
+                                <h5>@Html.DisplayFor(model => model.Category.Type)</h5>
+                                <h5>Price: <span class="itemPrice">$@Html.DisplayFor(model => model.Price)</span></h5>
+                                <h5>Budget: @Html.DisplayFor(model => model.Budget)</h5>
+                                <h5>
+                                    Rating
+                                    @{
+                                        if (Model.Rating >= 8)
+                                        {
+                                            <img class="stars" src="/Images/Stars/fiveStar.png" />
+                                        }
+                                        else if (Model.Rating >= 6)
+                                        {
+                                            <img class="stars" src="/Images/Stars/fourStar.png" />
+                                        }
+                                        else if (Model.Rating >= 4)
+                                        {
+                                            <img class="stars" src="/Images/Stars/threeStar.png" />
+                                        }
+                                        else if (Model.Rating >= 2)
+                                        {
+                                            <img class="stars" src="/Images/Stars/twoStar.png" />
+                                        }
+                                        else
+                                        {
+                                            <img class="stars" src="/Images/Stars/oneStar.png" />
+                                        }
+                                    }
+                                </h5>
+                                <h5>@Html.DisplayFor(model => model.PublishDate)</h5>
+                            </div>
+                            <div class="col-md-8">
+                                <h2>@Html.DisplayFor(model => model.Title)</h2>
+                                <p>@Html.DisplayFor(model => model.Content)</p>
+                            </div>
+                        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.Type)
-        </dd>
+                        <div class="col-md-12 panelBottom">
+                            <div class="col-md-4 text-center">
+                                <a class="btn btn-lg btn-default" href="@Url.Action("Back to List", "Index")">>Go Back &raquo;</a>
+                            </div>
+                            <div class="col-md-4 text-left">
+                                
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stars">
+                                    <div id="stars" class="starrr"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+        
+            
+        
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+          
+        
+            
+       
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PublishDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PublishDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductImg)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductImg)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Budget)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Budget)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+ 

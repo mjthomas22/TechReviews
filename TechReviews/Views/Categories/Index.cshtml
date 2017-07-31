@@ -4,36 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Categories</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CategoryImg)
-        </th>
-        <th></th>
-    </tr>
+@*Wanted a real quick way to see the categories, I orginally wanted to link them so you would see
+only items in each category but I could not figure it out.*@
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 reviewCol" id="catTitle">
+            <h4>
+                @Html.DisplayFor(modelItem => item.Type)
+            </h4>
             <img class="img-responsive img-thumbnail" src="@Html.DisplayFor(modelItem => item.CategoryImg)" />
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CategoryID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CategoryID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CategoryID })
-        </td>
-    </tr>
-}
+        </div>
+    }
+</div>
 
-</table>

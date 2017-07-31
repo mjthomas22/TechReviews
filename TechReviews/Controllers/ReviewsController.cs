@@ -52,6 +52,8 @@ namespace TechReviews.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Added to put date in instead of user
+
                 review.PublishDate = DateTime.Now;
                 db.Reviews.Add(review);
                 db.SaveChanges();

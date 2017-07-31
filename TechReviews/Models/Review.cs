@@ -9,6 +9,7 @@ namespace TechReviews.Models
 {
     public class Review
     {
+        //Added a lot of Display's to get the right phrasing
         [Key]
         public int ReviewID { get; set; }
         [Display(Name ="Product Name")]
@@ -22,7 +23,7 @@ namespace TechReviews.Models
         [Display(Name ="Rate the product from 1-10")]
         public double Rating { get; set; }
         public double Price { get; set; }
-        [Display(Name ="Please enter Low, Mid, or High")]
+        [Display(Name ="Budget r Please enter Low, Mid, or High")]
         public string Budget { get; set; }
 
         [ForeignKey("Category")]

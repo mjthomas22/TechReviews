@@ -4,10 +4,12 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Review</h2>
+
+@*Organized Layout for Details*@
 
 <div>
-    <h4>Review</h4>
+    <h4>Details</h4>
     <hr />
     <div class="container">
         <div class="row">
@@ -20,8 +22,10 @@
                                 <h5>@Html.DisplayFor(model => model.Category.Type)</h5>
                                 <h5>Price: <span class="itemPrice">$@Html.DisplayFor(model => model.Price)</span></h5>
                                 <h5>Budget: @Html.DisplayFor(model => model.Budget)</h5>
+                                <h5>Rating: @Html.DisplayFor(model => model.Rating)</h5>
+
+                                @*if statement to see what the rating was entered as and display the amount of stars earned*@
                                 <h5>
-                                    Rating
                                     @{
                                         if (Model.Rating >= 8)
                                         {
@@ -48,17 +52,17 @@
                                 <h5>@Html.DisplayFor(model => model.PublishDate)</h5>
                             </div>
                             <div class="col-md-8">
-                                <h2>@Html.DisplayFor(model => model.Title)</h2>
-                                <p>@Html.DisplayFor(model => model.Content)</p>
+                                <h4>@Html.DisplayFor(model => model.Title)</h4>
+                                <p id="descript">@Html.DisplayFor(model => model.Content)</p>
                             </div>
                         </div>
 
                         <div class="col-md-12 panelBottom">
                             <div class="col-md-4 text-center">
-                                <a class="btn btn-lg btn-default" href="@Url.Action("Back to List", "Index")">>Go Back &raquo;</a>
+                                <a class="btn btn-lg btn-default" href="@Url.Action("Index", "Reviews")">Go Back &raquo;</a>
                             </div>
                             <div class="col-md-4 text-left">
-                                
+
                             </div>
                             <div class="col-md-4">
                                 <div class="stars">
@@ -71,14 +75,6 @@
             </div>
         </div>
     </div>
-   
-        
-            
-        
+</div>
 
-          
-        
-            
-       
 
- 

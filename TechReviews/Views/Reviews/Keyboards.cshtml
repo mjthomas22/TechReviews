@@ -1,9 +1,8 @@
-﻿@model IEnumerable<TechReviews.Models.Review>
+﻿
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "View";
 }
-
 <a class="btn btn-default" href="@Url.Action("Create", "Reviews")">Create New &raquo;</a></p>
 
 <h2 class="otherHeaders">Reviews</h2>
@@ -13,16 +12,11 @@
 
     @foreach (var item in Model)
     {
-        //Just displaying a quick overview of products
-
-        <div class="col-md-4 reviewCol">
+        <div class="col-md-4 reviewCol">item.Reviews.ProductImg
 
             <div>
-                @*Displays image assigned to the item*@
-                <img class="img-responsive img-thumbnail" src=@Html.DisplayFor(modelItem => item.ProductImg) />
-                <span id="
-                      
-                      Type"> @Html.DisplayFor(modelItem => item.Category.Type)</span>
+                <img class="img-responsive img-thumbnail" src=@Html.DisplayFor(modelItem => TechReviews.Models.Review) />
+                <span id="catType"> @Html.DisplayFor(modelItem => item.Category.Type)</span>
             </div>
 
             <div>
@@ -37,11 +31,10 @@
                 <h5 class="title">Review Date: @Html.DisplayFor(modelItem => item.PublishDate.Month)/@Html.DisplayFor(modelItem => item.PublishDate.Year)</h5>
             </div>
             <div>
-                @*Displays a number of stars based on rating*@
-                @{ 
-                    if(item.Rating>=8)
+                @{
+                    if (item.Rating >= 8)
                     {
-                       <img class="stars" src ="/Images/Stars/fiveStar.png"/>
+                        <img class="stars" src="/Images/Stars/fiveStar.png" />
                     }
                     else if (item.Rating >= 6)
                     {
@@ -55,17 +48,14 @@
                     {
                         <img class="stars" src="/Images/Stars/twoStar.png" />
                     }
-                    else 
+                    else
                     {
                         <img class="stars" src="/Images/Stars/oneStar.png" />
                     }
                 }
             </div>
-
-            @*Details button takes you to see the whole review*@
             <a class="btn btn-default" href="@Url.Action("Details", new { id = item.ReviewID })">Read More &raquo;</a>
         </div>
         <p></p>
-    }
+                    }
 </div>
-
